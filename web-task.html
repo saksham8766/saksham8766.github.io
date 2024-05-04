@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>my portfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/bdfb5b0714.js" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header class="header">
+        <div class="container">  
+         <div class="header-cnt"> 
+          <a href="#" class="logo"><img src="home_img/Saksham Garg.png" alt="logo"></a>
+          <ul class="navbar">
+              <li><a href="home.html"  >Home</a></li>
+              <li><a href="about.html"  >About</a></li>
+              <li><a href="project.html" class="coloured">Projects</a></li>
+              <li><a href="contact.html"  >Contact</a></li>
+          </ul>
+          <a href="my resume.pdf"  class="resume-btn-1"><button>My Resume</button></a>
+          <a href="#" class="nav-m-open"><i class="fa-solid fa-bars"></i></a> 
+         </div>
+        </div> 
+        <div class="nav-m">
+          <div class="container">
+              <a href="#" class="nav-m-close"><i class="fa-solid fa-xmark"></i></a>
+              <ul class="navbar-mobile">
+                  <li><a href="home.html"  >Home</a></li>
+                  <li><a href="about.html"  >About</a></li>
+                  <li><a href="project.html"  class="coloured">Projects</a></li>
+                  <li><a href="contact.html"  >Contact</a></li>
+                  <li><a href="my resume.pdf"  class="resume-btn-2"><button>My Resume</button></a></li>
+              </ul>
+          </div>
+        </div>
+      </header>
+      <section class="case-study">
+        <div class="container">
+            <div class="cs-top">
+                <h2><span class="colored-text">Task Management Web Portal</span></h2>
+                <a href="https://www.figma.com/file/2XkbIea6ChgVvrZ2Eo3J6O/task-management?type=design&node-id=32%3A2292&mode=design&t=7nxN52GCfT77ISJf-1" target="_blank" class="g-i-t"><button>View Figma File</button></a>
+            </div>
+            <div class="cs-btm">
+                <img src="project_img/task-web.jpg" alt="Task Web Portal">
+                <p>My task manager Web portal design encapsulates a perfect blend of user-centricity and streamlined productivity. The design is deeply rooted in an intuitive interface that not only simplifies the user journey but also creates a visually pleasing and engaging user experience. With purposeful animations that engage without overwhelming, the design successfully guides users through their tasks, making it an interactive and enjoyable process. A well-thought-out information hierarchy ensures effortless navigation, presenting task-related details in a clear, concise, and structured format, thereby eliminating potential confusion. One of the standout aspects of the portal is the integrated performance index, a powerful tool that empowers users to track their productivity levels and make necessary adjustments to enhance their efficiency. The design is further enhanced by a simplified task management process, which simplifies user interaction, thereby reducing cognitive load and enhancing overall user satisfaction.</p>
+                <span class="cs-flx">
+                    <img src="case-study-img/mentors main.png" alt="mentors">
+                    <span>
+                        <p><b>Intuitive Interface:</b> I have designed an interface that prioritizes user needs, employing a user-centered design approach. This involved careful placement of elements, clear labeling, and logical flow, ensuring users can navigate the portal effortlessly and find what they need without confusion.</p>
+                        <p><b>Animations for Engagement:</b> I have strategically implemented animations to enhance user engagement without distracting from the primary tasks. Animations were used purposefully to guide users' attention, provide feedback on interactions, and create a more enjoyable user experience.</p>
+                    </span>
+                </span>
+                <p><b>Clear Information Hierarchy:</b> I have established a logical information hierarchy by organizing content in a visually intuitive manner. This hierarchy aids users in quickly understanding the most critical information, ensuring that task-related details are presented in a structured and easily digestible format.</p>
+                <p><b>Performance Index Integration:</b> I have introduced a performance index that quantifies and visualizes users' productivity. This index offers insights into task completion rates, time management, and overall productivity, allowing users to track their progress and make informed decisions for improvement.</p>
+                <span class="cs-flx">
+                    <span>
+                        <p><b>Simplified Task Management:</b> I have streamlined the process of managing tasks by designing an interface that simplifies adding, editing, and organizing tasks across different categories (personal, professional, health, and family). This simplicity reduces cognitive load and enhances efficiency.</p>
+                        <p><b>Animated Split Screens:</b> The use of animated split screens can provide a dynamic user experience, allowing for simultaneous interaction with multiple tasks or different aspects of the application.</p>
+                    </span>
+                    <img src="case-study-img/overviiew main.jpg" alt="dashboard">
+                </span>
+                <p><b>Color Combination:</b> A strategic color combination can enhance the visual appeal and usability of the app, with contrasting colors for important elements and softer tones for general interfaces.</p>
+                <p><b>User-Friendly Design:</b> Ensuring the design is user-friendly is crucial. This includes easy-to-understand instructions, intuitive navigation, and a clutter-free layout.</p>
+                <span class="cs-flx">
+                    <img src="case-study-img/setting 1.jpg" alt="settings">
+                    <span>
+                        <p><b>Customization Options:</b> Providing customization options, such as theme changes or adjustable settings, can enhance user satisfaction as it allows users to personalize their experience.</p>
+                        <p><b>Interactive Elements:</b> Incorporating interactive elements can make the task management process more engaging. This can include functionality for tasks, interactive charts for productivity tracking, etc.</p>
+                    </span>
+                </span>
+            </div>
+        </div>
+      </section>
+      <script>
+        $(document).ready(function(){
+            $(".nav-m-open").click(function(){
+                $(".nav-m").addClass("nav-show");
+            });
+        });
+        $(document).ready(function(){
+            $(".nav-m-close").click(function(){
+                $(".nav-m").removeClass("nav-show");
+            });
+        });
+      </script> 
+</body>
+</html> 

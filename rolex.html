@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>my portfolio</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/bdfb5b0714.js" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header class="header">
+        <div class="container">  
+         <div class="header-cnt"> 
+          <a href="#" class="logo"><img src="home_img/Saksham Garg.png" alt="logo"></a>
+          <ul class="navbar">
+              <li><a href="home.html"  >Home</a></li>
+              <li><a href="about.html"  >About</a></li>
+              <li><a href="project.html" class="coloured">Projects</a></li>
+              <li><a href="contact.html"  >Contact</a></li>
+          </ul>
+          <a href="my resume.pdf"  class="resume-btn-1"><button>My Resume</button></a>
+          <a href="#" class="nav-m-open"><i class="fa-solid fa-bars"></i></a> 
+         </div>
+        </div> 
+        <div class="nav-m">
+          <div class="container">
+              <a href="#" class="nav-m-close"><i class="fa-solid fa-xmark"></i></a>
+              <ul class="navbar-mobile">
+                  <li><a href="home.html"  >Home</a></li>
+                  <li><a href="about.html"  >About</a></li>
+                  <li><a href="project.html"  class="coloured">Projects</a></li>
+                  <li><a href="contact.html"  >Contact</a></li>
+                  <li><a href="my resume.pdf"  class="resume-btn-2"><button>My Resume</button></a></li>
+              </ul>
+          </div>
+        </div>
+      </header>
+      <section class="case-study">
+        <div class="container">
+            <div class="cs-top">
+                <h2><span class="colored-text">Rolex Landing Page Redesign</span></h2>
+                <a href="https://www.figma.com/file/BuylhDyPrcSrybF7LnmkaZ/ROLEX?type=design&node-id=2%3A4841&mode=design&t=uoDOcnqzwOGZ3q9n-1" target="_blank" class="g-i-t"><button>View Figma File</button></a>
+            </div>
+            <div class="cs-btm">
+                <img src="project_img/rolex.jpg" alt="rolex">
+                <p><b>Revamping Rolex:</b> Welcome to the revamped Rolex website, where timeless elegance meets enhanced functionality. As the lead designer behind this redesign, I've meticulously crafted a seamless user experience aimed at elevating your journey through the world of luxury timepieces.
+
+                One of the key highlights of this redesign is the revamped navigation bar. I've meticulously restructured it to ensure intuitive access to all the exquisite collections, allowing for effortless exploration of Rolex's legendary craftsmanship and heritage.</p>
+
+                <p><b>Additionally, I've introduced new sections to enrich your interaction with the brand:</b></p>
+                <span class="cs-flx">
+                    <img src="case-study-img/2+1.jpg" alt="rolex">
+                    <span>
+                        <p><b>About Us:</b> Delve into the rich legacy and ethos that define Rolex. Discover our storied history, commitment to excellence, and the values that shape every timepiece.</p>
+                    </span>
+                </span>
+                <p><b>Why To Choose Us:</b>  Unveil the unparalleled quality, precision, and innovation that make Rolex the epitome of luxury watchmaking. Explore what sets us apart and why discerning individuals worldwide choose Rolex.</p>
+                <span class="cs-flx">
+                    <span>
+                        <p><b>Testimonials:</b> Hear from our esteemed clientele. Real stories, real experiences. Dive into the testimonials shared by Rolex enthusiasts, narrating their journeys with our iconic timepieces.</p>
+                    </span>
+                    <img src="case-study-img/4.jpg" alt="rolex">
+                </span>
+                <p><b>Features:</b> Explore the intricate details and innovative features that adorn each Rolex watch. From exceptional craftsmanship to cutting-edge technology, this section showcases the distinctive elements that make Rolex a symbol of refinement and sophistication</p>
+                <span class="cs-flx">
+                    <img src="case-study-img/Property 1=Default.jpg" alt="rolex">
+                    <span>
+                        <p>This redesign is a tribute to the brand's legacy while embracing modern design principles to offer you an enhanced, immersive experience. It's more than just a website; it's an invitation to immerse yourself in the world of Rolex, discovering craftsmanship that transcends time.
+
+                        <b>Explore, experience, and indulge in the timeless allure of Rolex.</b></p>
+                    </span>
+                </span>
+            </div>
+        </div>
+      </section>
+      <script>
+        $(document).ready(function(){
+            $(".nav-m-open").click(function(){
+                $(".nav-m").addClass("nav-show");
+            });
+        });
+        $(document).ready(function(){
+            $(".nav-m-close").click(function(){
+                $(".nav-m").removeClass("nav-show");
+            });
+        });
+      </script> 
+</body>
+</html> 
