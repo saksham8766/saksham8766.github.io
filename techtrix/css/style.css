@@ -1,0 +1,534 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+a.logo {
+    display: block;
+    padding: 40px 50px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+img {
+    width: 150px;
+}
+
+section.Hero {
+    background-image: url(../img/herobg.jpg);
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 110px;
+}
+
+ul.menu-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-bar a {
+    color: white;
+}
+
+i.fa-solid.fa-phone {
+    font-size: 40px;
+    color: red;
+}
+
+span.nom {
+    color: white;
+    font-size: 20px;
+    margin-left: 50px;
+    display: block;
+    margin-top: -50px;
+}
+
+span.call {
+    display: block;
+    color: red;
+    margin-left: 50px;
+    margin-top: -19px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 3px;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-main {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+.hero-img img {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.hero-img a {
+    display: block;
+}
+
+.hero-img {
+    width: 60%;
+}
+
+.hero-content {
+    width: 40%;
+}
+
+p {
+    width: 88%;
+    margin-bottom: 40px;
+    color: white;
+    line-height: 30px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+strong {
+    display: block;
+    color: red;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 51px;
+    width: 84%;
+    margin: 10px 0 20px;
+    color: white;
+}
+
+button.white-btn {
+    background-color: white;
+    color: red;
+    margin-left: 30px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-box {
+    display: flex;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    width: 32%;
+    margin-top: -70px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.service-box a {
+    color: red;
+    font-size: 60px;
+    display: block;
+}
+
+.service-content p {
+    color: #acacac;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+.service-content h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    color: #acacac;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about .container {
+    display: flex;
+    padding: 100px  0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.abt-content h1 {
+    color: black;
+}
+
+.abt-content p {
+    color: black;
+    width: 80%;
+}
+
+.abt-img {
+    width: 50%;
+}
+
+.abt-content {
+    width: 50%;
+}
+section.service-big {
+    background-image: url(../img/whitebg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.s-b-head h1 {
+    color: black;
+    width: 43%;
+    text-align: center;
+    margin: 10px auto 20px;
+}
+
+.s-b-head strong {
+    margin: 0px 633px;
+}
+
+.s-b-logo\+heading {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.s-b-logo\+heading a {
+    color: red;
+    font-size: 60px;
+    display: block;
+}
+
+.s-b-logo\+heading h3 {
+    font-size: 26px;
+}
+
+.s-b-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.s-b-box {
+    background-color: #ffffff;
+    width: 30%;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+hr {
+    margin: 10px 0 30px;
+    opacity: 0.1;
+}
+
+.s-points {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.s-points a {
+    color: red;
+}
+
+.s-points p {
+    color: rgb(117 117 117);
+    margin: 0;
+    line-height: 20px;
+}
+
+.service-big .container {
+    padding: 100px 0;
+}
+
+.choose-us strong {
+    margin: 0 621px;
+}
+
+.choose-us h1 {
+    color: black;
+    margin: 0px auto 60px;
+    width: 50%;
+    text-align: center;
+}
+.chs-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+
+.chs-box {
+    width: 21%;
+    text-align: center;
+    background-color: #fafafa;
+    padding: 40px 10px;
+}
+
+.chs-box a {
+    color: white;
+    background-color: red;
+    display: block;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0px auto 20px;
+}
+
+i.fa-solid.fa-display {
+    padding: 25px 0;
+}
+
+i.fa-solid.fa-computer {
+    padding: 25px 0;
+}
+
+i.fa-brands.fa-creative-commons-sampling {
+    padding: 25px 0;
+}
+
+i.fa-regular.fa-circle-question {
+    padding: 25px 0;
+}
+
+i.fa-solid.fa-server {
+    padding: 25px 0;
+}
+
+i.fa-solid.fa-network-wired {
+    padding: 25px 0;
+}
+
+i.fa-solid.fa-wifi {
+    padding: 25px 0;
+}
+
+i.fa-solid.fa-globe {
+    padding: 25px 0;
+}
+
+.chs-box p {
+    color: rgb(117 117 117);
+    margin: 0 auto;
+}
+
+.choose-us .container {
+    margin: 100px auto;
+}
+
+section.project {
+    background-image: url(../img/herobg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 100px 0 350px;
+    background-attachment: fixed;
+}
+
+.project-cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-txt h1 {
+    margin: 0;
+    width: 50%;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8080800d;
+    padding-bottom: 10px;
+}
+.project-box a {
+    display: block;
+}
+
+.project-box img {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+
+.project-box {
+    background-color: white;
+    width: 23%;
+    border-radius: 5px;
+}
+
+section.project-slide {
+    margin-top: -320px;
+}
+
+.project-box p {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.project-box h3 {
+    font-size: 26px;
+}
+
+.p-box-cnt {
+    padding: 20px 15px;
+}
+
+.benefit-text h1 {
+    color: black;
+}
+
+.benefit-text p {
+    color: rgb(117 117 117);
+}
+
+.b-point {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+i.fa-solid.fa-check-double {
+    color: red;
+}
+
+.b-point {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.b-point p {
+    margin-bottom: 0;
+}
+
+.benefit-text button {
+    margin-top: 30px;
+}
+
+.form {
+    background-color: whitesmoke;
+    text-align: center;
+    width: 30%;
+    padding: 25px 0;
+}
+
+.form h1 {
+    color: black;
+    width: auto;
+    margin: 0px 0px 10px;
+    font-size: 30px;
+}
+input {
+    display: block;
+    border: none;
+    height: 60px;
+    padding: 0px 60px 0px 20px;
+    border-radius: 3px;
+}
+
+.benefits .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+input[type="button"] {
+    background-color: red;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 3px;
+    margin: 2rem 0px 0px 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px;
+    gap: 2rem;
+}
+
+.benefit-text {
+    width: 70%;
+}
+
+textarea {
+    display: block;
+    border: none;
+    padding: 10px 60px 0px 20px;
+    border-radius: 3px;
+}
+
+section.testimonial {
+    background-color: red;
+}
+
+.t-text strong {
+    color: white;
+}
+
+.t-text h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.t-content {
+    background-color: white;
+}
+
+.t-content {
+    background-color: white;
+}
+
+.t-i img {
+    width: 100px;
+}
