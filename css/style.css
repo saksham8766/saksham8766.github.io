@@ -535,6 +535,9 @@ h2 {
     left: -40px;
     z-index: 0;
 }
+.edu-box.edu-box-2::before {
+    content: '2';
+}
 
 .edu-series {
     counter-reset: education;
@@ -568,13 +571,31 @@ span.line {
         width: 100%;
     }
 }
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(68deg, rgba(177, 108, 234, 1) 0%, rgba(255, 94, 105, 1) 33%, rgba(255, 138, 86, 1) 66%, rgba(255, 168, 75, 1) 100%);
+    transition: width 1.5s ease-in-out;
+}
 .skill-box h4 {
     font-size: 25px;
     color: white;
     margin-bottom: 12px;
 }
-
+.hero-flex .hero-right img  {
+    border-radius: 20px;
+}
+.cnt-ryt  img {
+    border-radius: 20px;
+}
 .skills-series {
     display: flex;
     gap: 40px;
@@ -800,6 +821,27 @@ section.ui-pro {
     flex-wrap: wrap;
     row-gap: 40px;
 }
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(68deg, rgba(177, 108, 234, 1) 0%, rgba(255, 94, 105, 1) 33%, rgba(255, 138, 86, 1) 66%, rgba(255, 168, 75, 1) 100%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+.inner-ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 174, 123, 0.47);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    border-radius: 50%;}
 
 .ui-box {
     width: 28%;
@@ -885,6 +927,9 @@ section.web-pro {
 
 section.gd-pro {
     padding: 80px 0;
+}
+.edu-series.edu-series-2 {
+    margin-top: 50px;
 }
 
 @media (max-width:1050px){
@@ -1083,7 +1128,13 @@ span.social-media {
         gap: 30px;
     }
 }
-
+.a1-btm h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+.tool-box img {
+    width: 60%;
+}
 section.case-study {
     padding: 80px 0;
 }
@@ -1183,4 +1234,10 @@ span.cs-flx {
 span.cs-mob {
     display: flex;
     flex-direction: row;
+}
+@media screen and (max-width:1248px) and (min-width:861px) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
