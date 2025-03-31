@@ -78,8 +78,8 @@
                             <h3>Css:3</h3>
                          </div>
                          <div class="tool-box">
-                            <img src="about-img/framer.png" alt="Framer">
-                            <h3>Framer</h3>
+                            <img src="about-img/canva.png" alt="Framer">
+                            <h3>Canva</h3>
                          </div>
                          <div class="tool-box">
                             <img src="about-img/js.png" alt="Javascript">
@@ -92,6 +92,14 @@
                          <div class="tool-box">
                             <img src="about-img/ps.png" alt="Adobe Photoshop">
                             <h3>Photoshop</h3>
+                         </div>
+                         <div class="tool-box">
+                            <img src="about-img/jira.png" alt="Adobe Photoshop">
+                            <h3>Jira</h3>
+                         </div>
+                         <div class="tool-box">
+                            <img src="about-img/slack.png" alt="Adobe Photoshop">
+                            <h3>Slack</h3>
                          </div>
                       </div>
                 </div>
@@ -155,6 +163,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="edu-series edu-series-2 ">
+                    <div class="edu-box edu-box-2">
+                        <img src="about-img/Qmanja.png" alt="dav">
+                        <div class="edu-box-cnt">
+                            <h4>Qmanja Solution</h4>
+                            <span class="edu-info">
+                                <button>Ui/Ux Designer / Web Designer</button>
+                                <button> <img src="home_img/Ellipse 1.png" alt="dot"> August 2024  </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       </section>
@@ -165,31 +186,54 @@
                 <div class="skills-series">
                     <div class="skill-box">
                         <h4>Figma - 90%</h4>
-                        <img src="about-img/fig-line.jpg" alt="figma">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="90"></div>
+                        </div>
                     </div>
                     <div class="skill-box">
                         <h4>Html:5 - 85%</h4>
-                        <img src="about-img/html-line.png" alt="html">
-                    </div><div class="skill-box">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
                         <h4>Css:3 - 80%</h4>
-                        <img src="about-img/css-line.png" alt="css">
-                    </div><div class="skill-box">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
                         <h4>Adobe Photoshop - 70%</h4>
-                        <img src="about-img/ps-line.png" alt="adobe Photoshop">
-                    </div><div class="skill-box">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
                         <h4>Adobe Illustrator - 70%</h4>
-                        <img src="about-img/ai-line.png" alt="adobe illustrator">
-                    </div><div class="skill-box">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
                         <h4>Javascript - 30%</h4>
-                        <img src="about-img/js-line.png" alt="javascript">
-                    </div><div class="skill-box">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="30"></div>
+                        </div>
+                    </div>
+                    <div class="skill-box">
                         <h4>Framer - 50%</h4>
-                        <img src="about-img/framer-line.png" alt="framer">
+                        <div class="skill-bar">
+                            <div class="progress" data-width="50"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </section>
+    </section>
+    <div class="ball-main-div">
+        <div class="ball"></div>
+        <div class="inner-ball"></div> <!-- Added inner ball -->
+      </div>
       <script>
         $(document).ready(function(){
             $(".nav-m-open").click(function(){
@@ -201,6 +245,92 @@
                 $(".nav-m").removeClass("nav-show");
             });
         });
+
+
+
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const skillBars = document.querySelectorAll(".progress");
+
+    function showProgress() {
+        const section = document.querySelector(".skills");
+        const sectionPosition = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (sectionPosition < screenHeight - 100) {
+            skillBars.forEach((bar) => {
+                const width = bar.getAttribute("data-width");
+                bar.style.width = width + "%";
+            });
+        }
+    }
+
+    window.addEventListener("scroll", showProgress);
+});
+
+
+
+
+
+
+
+
+/*-----------------------------BALL_JS_START----------------------------------------------------*/
+
+const ball = document.querySelector('.ball');
+const innerBall = document.querySelector('.inner-ball'); // Select the inner ball
+const buttons = document.querySelectorAll('button,a,img'); // Select all buttons
+let ballX = 0, ballY = 0;
+let mouseX = 0, mouseY = 0;
+let delay = 1; // This controls the delay factor
+
+// Listen for mouse movement and update mouseX, mouseY
+document.addEventListener('mousemove', function(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+});
+
+// Function to move the ball and inner ball with delay (lerping effect)
+function moveBalls() {
+    ballX += (mouseX - ballX) * delay;
+    ballY += (mouseY - ballY) * delay;
+
+    ball.style.left = `${ballX}px`;
+    ball.style.top = `${ballY}px`;
+
+    innerBall.style.left = `${ballX}px`; // Move inner ball with the outer ball
+    innerBall.style.top = `${ballY}px`;
+
+    requestAnimationFrame(moveBalls); // Keep the loop going
+}
+
+moveBalls(); // Start the movement loop
+
+// Apply hover effect to all buttons
+buttons.forEach(button => {
+    // Button hover event to increase outer ball size and change color
+    button.addEventListener('mouseenter', () => {
+        ball.style.width = '20px';
+        ball.style.height = '20px';
+        ball.style.backgroundColor = '#f763017a'; // Change color when hovering the button
+        innerBall.style.width = '20px'; // Change inner ball size
+        innerBall.style.height = '20px'; // Change inner ball size
+    });
+
+    // Reset outer ball size and color when the mouse leaves the button
+    button.addEventListener('mouseleave', () => {
+        ball.style.width = '40px';
+        ball.style.height = '40px';
+        ball.style.backgroundColor = '#f76301c9'; // Revert to red after hovering the button
+        innerBall.style.width = '20px'; // Reset inner ball size
+        innerBall.style.height = '20px'; // Reset inner ball size
+    });
+});
+/*-----------------------------BALL_JS_END----------------------------------------------------*/
     </script>
 </body>
 </html>
