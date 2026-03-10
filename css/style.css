@@ -16,6 +16,10 @@ body {
     background: #161513;
 }
 
+a.logo {
+    width: 220px;
+}
+
 a {
     line-height: 0;
 }
@@ -1244,3 +1248,4 @@ span.cs-mob {
         margin: 0 auto;
     }
 }
+
