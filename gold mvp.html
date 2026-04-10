@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Gold – Case Study | Saksham Garg</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/bdfb5b0714.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ─── ADDITIVE ONLY — zero overrides ─── */
+
+      /* ── Breadcrumb ── */
+      .cs-breadcrumb {
+        padding: 20px 0 0; font-size: 13px; color: rgba(255,255,255,.4);
+        display: flex; align-items: center; gap: 8px;
+      }
+      .cs-breadcrumb a { color: rgba(255,255,255,.4); font-size: 13px; line-height: 1; }
+      .cs-breadcrumb a:hover { color: white; }
+      .cs-breadcrumb i { font-size: 9px; }
+
+      /* ── Section wrappers ── */
+      .cs-section { padding: 72px 0; }
+      .cs-section.cs-dark { background: #000; }
+
+      .cs-label {
+        font-size: 10px; font-weight: 700; letter-spacing: .16em;
+        text-transform: uppercase; color: rgba(255,138,86,.8);
+        margin-bottom: 10px; display: block;
+      }
+
+      /* ── Hero ── */
+      .cs-hero-grid {
+        display: grid; grid-template-columns: 1fr 1fr;
+        gap: 56px; align-items: center; margin-top: 36px;
+      }
+      .cs-hero-left h1 {
+        font-size: 42px; line-height: 1.15; width: 100%; margin-bottom: 14px;
+      }
+      .cs-subtitle {
+        font-size: 15px; color: rgba(255,255,255,.58);
+        line-height: 1.7; margin: 0 0 22px; font-weight: 400;
+      }
+      .cs-meta-row {
+        display: flex; gap: 24px; flex-wrap: wrap;
+        margin-top: 24px; padding-top: 24px;
+        border-top: 1px solid rgba(255,255,255,.08);
+      }
+      .cs-meta-item label {
+        display: block; font-size: 9px; font-weight: 700; letter-spacing: .14em;
+        text-transform: uppercase; color: rgba(255,255,255,.32); margin-bottom: 5px;
+      }
+      .cs-meta-item span { font-size: 13px; font-weight: 600; color: white; }
+
+      /* ── Hero cover ── */
+      .cs-hero-cover {
+        width: 100%; aspect-ratio: 16/11;
+        background: linear-gradient(135deg,rgba(177,108,234,.1) 0%,rgba(255,94,105,.1) 50%,rgba(255,168,75,.1) 100%);
+        border: 1px solid rgba(255,255,255,.07); border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        position: relative; overflow: hidden;
+      }
+      .cs-hero-cover::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 55% 35%,rgba(255,168,75,.09) 0%,transparent 60%);
+      }
+      .cs-hero-cover-label {
+        position: relative; z-index: 1; text-align: center;
+        color: rgba(255,255,255,.22); font-size: 12px;
+      }
+      .cs-hero-cover-label i {
+        font-size: 28px; display: block; margin-bottom: 8px;
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,94,105,1) 33%,rgba(255,138,86,1) 66%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      }
+
+      /* ── Big stat bar ── */
+      .cs-stat-bar {
+        display: grid; grid-template-columns: repeat(4,1fr);
+        border: 1px solid rgba(255,255,255,.07); border-radius: 12px;
+        overflow: hidden; margin-top: 28px;
+      }
+      .cs-stat-item {
+        padding: 22px 18px; border-right: 1px solid rgba(255,255,255,.07);
+        background: rgba(255,255,255,.015); text-align: center;
+      }
+      .cs-stat-item:last-child { border-right: none; }
+      .cs-stat-num {
+        font-family: 'Bai Jamjuree', sans-serif; font-size: 32px; font-weight: 700;
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,94,105,1) 33%,rgba(255,138,86,1) 66%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        line-height: 1; margin-bottom: 6px;
+      }
+      .cs-stat-item p {
+        font-size: 11px; color: rgba(255,255,255,.4); line-height: 1.4;
+        height: auto !important; overflow: visible !important;
+      }
+
+      /* ── Two-col layouts ── */
+      .cs-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+      .cs-two-col.cs-60-40 { grid-template-columns: 60fr 40fr; }
+      .cs-two-col.cs-40-60 { grid-template-columns: 40fr 60fr; }
+
+      /* ── Primary bullet pattern ── */
+      .cs-bullet-list { display: flex; flex-direction: column; gap: 9px; margin-top: 6px; }
+      .cs-bullet-item {
+        display: flex; align-items: flex-start; gap: 11px;
+        font-size: 14px; color: rgba(255,255,255,.68); line-height: 1.6;
+      }
+      .cs-bullet-item::before {
+        content: '→'; font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 3px;
+        background: linear-gradient(68deg,rgba(255,94,105,1) 0%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      }
+      .cs-bullet-item strong { color: white; font-weight: 600; }
+
+      /* ── Two-column bullets ── */
+      .cs-bullet-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 36px; margin-top: 6px; }
+
+      /* ── Cards ── */
+      .cs-card-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 6px; }
+      .cs-card {
+        background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07);
+        border-radius: 10px; padding: 18px 20px; transition: border-color .2s;
+      }
+      .cs-card:hover { border-color: rgba(255,138,86,.25); }
+      .cs-card-icon {
+        width: 30px; height: 30px; border-radius: 7px;
+        background: linear-gradient(68deg,rgba(177,108,234,.15) 0%,rgba(255,168,75,.15) 100%);
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 10px; font-size: 13px;
+      }
+      .cs-card-icon i {
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,94,105,1) 33%,rgba(255,138,86,1) 66%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      }
+      .cs-card h6 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 5px; }
+      .cs-card p  { font-size: 12px; color: rgba(255,255,255,.42); line-height: 1.55; height: auto !important; overflow: visible !important; }
+
+      /* ── System matrix — the full-system section ── */
+      .cs-sys-matrix {
+        display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-top: 6px;
+      }
+      .cs-sys-block {
+        border: 1px solid rgba(255,255,255,.07); border-radius: 10px; overflow: hidden;
+      }
+      .cs-sys-head {
+        padding: 12px 16px; background: rgba(255,255,255,.03);
+        border-bottom: 1px solid rgba(255,255,255,.07);
+        display: flex; align-items: center; gap: 9px;
+      }
+      .cs-sys-head i {
+        font-size: 12px;
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      }
+      .cs-sys-head span { font-size: 12px; font-weight: 700; color: white; }
+      .cs-sys-count {
+        margin-left: auto; font-size: 10px; font-weight: 700;
+        padding: 2px 8px; border-radius: 100px;
+        background: rgba(255,168,75,.1); border: 1px solid rgba(255,168,75,.2);
+        color: rgba(255,168,75,.85);
+      }
+      .cs-sys-body { padding: 12px 16px; }
+      .cs-sys-body .cs-bullet-item { font-size: 12px; gap: 9px; }
+
+      /* ── Constraint split ── */
+      .cs-constraint-grid {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 6px;
+      }
+      .cs-constraint-block {
+        border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 20px;
+      }
+      .cs-constraint-block .cs-cb-label {
+        font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+        margin-bottom: 12px; display: block;
+      }
+      .cs-constraint-block.cs-cb-red .cs-cb-label { color: rgba(255,94,105,.75); }
+      .cs-constraint-block.cs-cb-gold .cs-cb-label { color: rgba(255,168,75,.75); }
+
+      /* ── Flow strip ── */
+      .cs-flow {
+        display: flex; align-items: center; flex-wrap: nowrap; gap: 0;
+        margin: 10px 0; background: rgba(255,255,255,.02);
+        border: 1px solid rgba(255,255,255,.06); border-radius: 8px;
+        padding: 12px 16px; overflow-x: auto;
+      }
+      .cs-flow-step {
+        font-size: 11px; font-weight: 600; color: white;
+        background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09);
+        border-radius: 5px; padding: 5px 11px; white-space: nowrap; flex-shrink: 0;
+      }
+      .cs-flow-arrow { font-size: 9px; color: rgba(255,138,86,.5); margin: 0 7px; flex-shrink: 0; }
+      .cs-flow-step.cs-flow-end {
+        background: linear-gradient(68deg,rgba(177,108,234,.15) 0%,rgba(255,168,75,.15) 100%);
+        border-color: rgba(255,168,75,.25); color: rgba(255,168,75,1);
+      }
+      .cs-flow-label {
+        font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+        color: rgba(255,255,255,.25); margin-bottom: 5px; margin-top: 20px;
+      }
+      .cs-flow-label:first-child { margin-top: 0; }
+
+      /* ── Image placeholder ── */
+      .cs-img-placeholder {
+        width: 100%; border-radius: 10px; background: rgba(255,255,255,.02);
+        border: 1px dashed rgba(255,255,255,.09);
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 8px; color: rgba(255,255,255,.2); font-size: 12px; text-align: center;
+        padding: 32px 20px; box-sizing: border-box;
+      }
+      .cs-img-placeholder i { font-size: 22px; opacity: .28; }
+      .cs-img-placeholder.cs-img-tall  { min-height: 300px; }
+      .cs-img-placeholder.cs-img-wide  { min-height: 220px; }
+      .cs-img-placeholder.cs-img-xwide { min-height: 360px; }
+
+      /* ── State grid ── */
+      .cs-state-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 11px; margin-top: 6px; }
+      .cs-state-card { border: 1px solid rgba(255,255,255,.07); border-radius: 8px; overflow: hidden; }
+      .cs-state-card-head {
+        padding: 9px 13px; font-size: 9px; font-weight: 700; letter-spacing: .1em;
+        text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,.07);
+        background: rgba(255,255,255,.02);
+      }
+      .cs-state-card-head.cs-state-empty   { color: rgba(255,255,255,.38); }
+      .cs-state-card-head.cs-state-loading { color: rgba(177,108,234,.75); }
+      .cs-state-card-head.cs-state-error   { color: rgba(255,94,105,.8); }
+      .cs-state-card-body { padding: 12px 13px; font-size: 11px; color: rgba(255,255,255,.42); line-height: 1.55; }
+      .cs-state-card-body strong { color: rgba(255,255,255,.72); display: block; margin-bottom: 3px; font-size: 12px; font-weight: 700; }
+
+      /* ── UX decision cards ── */
+      .cs-decision-list { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+      .cs-decision-item {
+        display: flex; gap: 14px; align-items: flex-start;
+        padding: 14px 16px; border: 1px solid rgba(255,255,255,.07);
+        border-radius: 8px; background: rgba(255,255,255,.015);
+      }
+      .cs-decision-num {
+        font-family: 'Bai Jamjuree', sans-serif; font-size: 22px; font-weight: 700;
+        line-height: 1; flex-shrink: 0; margin-top: 1px;
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        opacity: .45;
+      }
+      .cs-decision-item h6 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 3px; }
+      .cs-decision-item p  { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.55; height: auto !important; overflow: visible !important; }
+
+      /* ── Screen count chips ── */
+      .cs-screen-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+      .cs-screen-chip {
+        display: flex; align-items: center; gap: 8px;
+        padding: 10px 16px; border: 1px solid rgba(255,255,255,.07);
+        border-radius: 8px; background: rgba(255,255,255,.02); flex: 1; min-width: 140px;
+      }
+      .cs-screen-chip i {
+        font-size: 14px;
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        flex-shrink: 0;
+      }
+      .cs-screen-chip strong { font-size: 13px; color: white; font-weight: 700; display: block; }
+      .cs-screen-chip span  { font-size: 11px; color: rgba(255,255,255,.38); }
+
+      /* ── Outcome ── */
+      .cs-outcome-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 6px; }
+      .cs-outcome-item {
+        text-align: center; padding: 24px 12px;
+        border: 1px solid rgba(255,255,255,.07); border-radius: 10px;
+        background: rgba(255,255,255,.02);
+      }
+      .cs-out-num {
+        font-family: 'Bai Jamjuree', sans-serif; font-size: 36px; font-weight: 700;
+        line-height: 1; margin-bottom: 7px;
+        background: linear-gradient(68deg,rgba(177,108,234,1) 0%,rgba(255,94,105,1) 33%,rgba(255,138,86,1) 66%,rgba(255,168,75,1) 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      }
+      .cs-outcome-item p { font-size: 11px; color: rgba(255,255,255,.42); line-height: 1.45; height: auto !important; overflow: visible !important; }
+
+      /* ── Divider ── */
+      .cs-full-img { margin: 36px 0; }
+
+      /* ── Pills ── */
+      .cs-pill-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 6px; }
+      .cs-pill {
+        padding: 5px 13px; font-size: 11px; font-weight: 500;
+        color: rgba(255,255,255,.6); background: rgba(255,255,255,.04);
+        border: 1px solid rgba(255,255,255,.08); border-radius: 100px;
+      }
+      .cs-pill.cs-p-red { border-color: rgba(255,94,105,.25); color: rgba(255,94,105,.8); background: rgba(255,94,105,.05); }
+      .cs-pill.cs-p-gold { border-color: rgba(255,168,75,.25); color: rgba(255,168,75,.85); background: rgba(255,168,75,.05); }
+
+      /* ── Responsive ── */
+      @media (max-width: 860px) {
+        .cs-hero-grid,.cs-two-col,.cs-two-col.cs-60-40,.cs-two-col.cs-40-60 { grid-template-columns:1fr; gap:28px; }
+        .cs-stat-bar { grid-template-columns:repeat(2,1fr); }
+        .cs-stat-item:nth-child(2) { border-right: none; }
+        .cs-stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,.07); }
+        .cs-stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,.07); }
+        .cs-card-grid,.cs-sys-matrix,.cs-constraint-grid,.cs-bullet-cols { grid-template-columns:1fr; }
+        .cs-state-grid { grid-template-columns:1fr 1fr; }
+        .cs-outcome-row { grid-template-columns:repeat(2,1fr); }
+        .cs-hero-left h1 { font-size:30px; }
+        .cs-section { padding:52px 0; }
+      }
+      @media (max-width: 450px) {
+        .cs-hero-left h1 { font-size:24px; }
+        .cs-state-grid { grid-template-columns:1fr; }
+        .cs-outcome-row { grid-template-columns:1fr 1fr; }
+        .cs-section { padding:40px 0; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ═══════════════ HEADER (unchanged) ═══════════════ -->
+    <header class="header">
+      <div class="container">
+        <div class="header-cnt">
+          <a href="#" class="logo"><img src="home_img/Saksham Garg.svg" alt="logo" /></a>
+          <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="coloured">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="my resume.pdf" class="resume-btn-1"><button>My Resume</button></a>
+          <a href="#" class="nav-m-open"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+      <div class="nav-m">
+        <div class="container">
+          <a href="#" class="nav-m-close"><i class="fa-solid fa-xmark"></i></a>
+          <ul class="navbar-mobile">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="coloured">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="my resume.pdf" class="resume-btn-2"><button>My Resume</button></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <div class="cs-breadcrumb">
+          <a href="projects.html">Projects</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Digital Gold</span>
+        </div>
+        <div class="cs-hero-grid">
+          <div class="cs-hero-left">
+            <span class="cs-label">Fintech · End-to-End Product Design · Magento + Custom Modules</span>
+            <h1>Digital Gold<br /><span class="colored-text">Investment Platform</span></h1>
+            <p class="cs-subtitle">
+              A full product — not just a dashboard. Public website, ecommerce checkout, vault system, portfolio dashboard, savings engine, and email flows. Built on Magento, extended for fintech logic.
+            </p>
+            <a href="https://www.figma.com/file/rnR0TrIv3HE2p4FL2Tm6Nm/" target="_blank" class="g-i-t"><button>View Figma File</button></a>
+            <div class="cs-stat-bar">
+              <div class="cs-stat-item">
+                <div class="cs-stat-num">69+</div>
+                <p>Desktop Screens</p>
+              </div>
+              <div class="cs-stat-item">
+                <div class="cs-stat-num">75+</div>
+                <p>Mobile Screens</p>
+              </div>
+              <div class="cs-stat-item">
+                <div class="cs-stat-num">20+</div>
+                <p>States & Edge Cases</p>
+              </div>
+              <div class="cs-stat-item">
+                <div class="cs-stat-num">5+</div>
+                <p>Interactive Prototypes</p>
+              </div>
+            </div>
+            <div class="cs-meta-row">
+              <div class="cs-meta-item"><label>Role</label><span>End-to-End Product Designer</span></div>
+              <div class="cs-meta-item"><label>Platform</label><span>Web · Desktop-first + Mobile</span></div>
+              <div class="cs-meta-item"><label>Deliverable</label><span>Figma · Dev Handoff</span></div>
+            </div>
+          </div>
+          <div>
+            <!-- IMAGE: Full Platform Overview -->
+            <div class="cs-hero-cover">
+              <div class="cs-hero-cover-label">
+                <i class="fa-solid fa-image"></i>
+                Full Platform Overview
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="line" style="display:block; margin:0;"></span>
+
+    <!-- ══════════ 01 — PROBLEM ══════════ -->
+    <section class="cs-section cs-dark">
+      <div class="container">
+        <div class="cs-two-col cs-40-60">
+          <div>
+            <span class="cs-label">01 — Problem</span>
+            <h2 style="font-size:28px; margin-bottom:0; color:white; line-height:1.2;"><span class="colored-text">Why this needed to be built from scratch</span></h2>
+          </div>
+          <div class="cs-card-grid">
+            <div class="cs-card">
+              <div class="cs-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h6>Low Trust</h6>
+              <p>No purity info, no vault visibility. Users dropped before checkout.</p>
+            </div>
+            <div class="cs-card">
+              <div class="cs-card-icon"><i class="fa-solid fa-route"></i></div>
+              <h6>Complex Flows</h6>
+              <p>Investment flows felt like e-commerce. Wrong mental model entirely.</p>
+            </div>
+            <div class="cs-card">
+              <div class="cs-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h6>No Visibility</h6>
+              <p>Zero portfolio tracking. No way to see holdings, value, or history.</p>
+            </div>
+            <div class="cs-card">
+              <div class="cs-card-icon"><i class="fa-solid fa-rotate"></i></div>
+              <h6>No Savings Layer</h6>
+              <p>No recurring purchase mechanism. No reason to return after first buy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 02 — SOLUTION ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <div class="cs-two-col cs-60-40">
+          <div>
+            <span class="cs-label">02 — Solution</span>
+            <h2 style="font-size:28px; margin-bottom:0; color:white; line-height:1.2;"><span class="colored-text">Ecommerce infrastructure. Fintech experience.</span></h2>
+            <div class="cs-bullet-list" style="margin-top:20px;">
+              <div class="cs-bullet-item">Public website — trust, discovery, and buying in one flow</div>
+              <div class="cs-bullet-item">Vault + delivery — two distinct paths, one checkout</div>
+              <div class="cs-bullet-item">Portfolio dashboard — live holdings, transactions, orders</div>
+              <div class="cs-bullet-item">Monthly savings system — set, pause, cancel anytime</div>
+              <div class="cs-bullet-item">Auth system — guest to account, 2FA, session management</div>
+            </div>
+          </div>
+          <div>
+            <!-- IMAGE: Key Screens -->
+            <div class="cs-img-placeholder cs-img-tall">
+              <i class="fa-solid fa-image"></i>
+              Key Screens
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="line" style="display:block; margin:0;"></span>
+
+    <!-- ══════════ 03 — WHAT I DESIGNED ══════════ -->
+    <section class="cs-section cs-dark">
+      <div class="container">
+        <span class="cs-label">03 — What I Designed</span>
+        <h2 style="font-size:28px; margin-bottom:6px; color:white; line-height:1.2;"><span class="colored-text">Six systems. One product.</span></h2>
+        <p style="font-size:13px; color:rgba(255,255,255,.4); margin-bottom:28px; line-height:1.6;">
+          Not a single flow. Every system designed end-to-end, with its own states, logic, and edge cases.
+        </p>
+
+        <div class="cs-sys-matrix">
+
+          <div class="cs-sys-block">
+            <div class="cs-sys-head">
+              <i class="fa-solid fa-globe"></i>
+              <span>Website (Pre-login)</span>
+              <span class="cs-sys-count">5 pages</span>
+            </div>
+            <div class="cs-sys-body">
+              <div class="cs-bullet-list">
+                <div class="cs-bullet-item">Landing page + trust signals</div>
+                <div class="cs-bullet-item">PLP — gold listing + live price</div>
+                <div class="cs-bullet-item">PDP — purity, vault vs delivery, CTA</div>
+                <div class="cs-bullet-item">Cart + Checkout</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sys-block">
+            <div class="cs-sys-head">
+              <i class="fa-solid fa-lock"></i>
+              <span>Auth System</span>
+              <span class="cs-sys-count">7 screens</span>
+            </div>
+            <div class="cs-sys-body">
+              <div class="cs-bullet-list">
+                <div class="cs-bullet-item">Login / Signup / Forgot password</div>
+                <div class="cs-bullet-item">Optional 2FA setup</div>
+                <div class="cs-bullet-item">Guest → account conversion</div>
+                <div class="cs-bullet-item">Session expiry handling</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sys-block">
+            <div class="cs-sys-head">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Purchase System</span>
+              <span class="cs-sys-count">2 paths</span>
+            </div>
+            <div class="cs-sys-body">
+              <div class="cs-bullet-list">
+                <div class="cs-bullet-item">Vault path — login required</div>
+                <div class="cs-bullet-item">Delivery path — guest or logged in</div>
+                <div class="cs-bullet-item">Magento checkout extended</div>
+                <div class="cs-bullet-item">Price lock + confirmation logic</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sys-block">
+            <div class="cs-sys-head">
+              <i class="fa-solid fa-gauge-high"></i>
+              <span>Dashboard System</span>
+              <span class="cs-sys-count">6 modules</span>
+            </div>
+            <div class="cs-sys-body">
+              <div class="cs-bullet-list">
+                <div class="cs-bullet-item">Portfolio — live value + chart</div>
+                <div class="cs-bullet-item">Holdings — gram, value, vault status</div>
+                <div class="cs-bullet-item">Orders — vault + delivery separate</div>
+                <div class="cs-bullet-item">Transactions — full log, filterable</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sys-block">
+            <div class="cs-sys-head">
+              <i class="fa-solid fa-piggy-bank"></i>
+              <span>Savings System</span>
+              <span class="cs-sys-count">4-step flow</span>
+            </div>
+            <div class="cs-sys-body">
+              <div class="cs-bullet-list">
+                <div class="cs-bullet-item">Monthly plan setup — 4 steps (was 7)</div>
+                <div class="cs-bullet-item">Pause / resume / cancel from dashboard</div>
+                <div class="cs-bullet-item">Vault or delivery per plan</div>
+                <div class="cs-bullet-item">Charge failure + recovery flow</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cs-sys-block">
+            <div class="cs-sys-head">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email System</span>
+              <span class="cs-sys-count">4 types</span>
+            </div>
+            <div class="cs-sys-body">
+              <div class="cs-bullet-list">
+                <div class="cs-bullet-item">Order confirmation — item + price + status</div>
+                <div class="cs-bullet-item">Savings activated / updated</div>
+                <div class="cs-bullet-item">Payment failed — plan auto-paused</div>
+                <div class="cs-bullet-item">Password reset + security alerts</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cs-full-img">
+          <!-- IMAGE: System Breakdown -->
+          <div class="cs-img-placeholder cs-img-xwide">
+            <i class="fa-solid fa-image"></i>
+            System Breakdown — All 6 Systems
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 04 — MVP THINKING ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <span class="cs-label">04 — MVP Thinking</span>
+        <h2 style="font-size:28px; margin-bottom:6px; color:white; line-height:1.2;"><span class="colored-text">Built on Magento, extended for fintech logic</span></h2>
+        <p style="font-size:13px; color:rgba(255,255,255,.4); margin-bottom:24px;">Constraints weren't blockers. They were inputs.</p>
+        <div class="cs-constraint-grid">
+          <div class="cs-constraint-block cs-cb-red">
+            <span class="cs-cb-label">Platform Constraints</span>
+            <div class="cs-bullet-list">
+              <div class="cs-bullet-item">Magento checkout not designed for finance</div>
+              <div class="cs-bullet-item">No native subscription or vault module</div>
+              <div class="cs-bullet-item">Cart logic = e-commerce, not investment</div>
+              <div class="cs-bullet-item">Guest checkout limited to delivery only</div>
+            </div>
+          </div>
+          <div class="cs-constraint-block cs-cb-gold">
+            <span class="cs-cb-label">Design Decisions</span>
+            <div class="cs-bullet-list">
+              <div class="cs-bullet-item">Vault requires login — enforced in UX</div>
+              <div class="cs-bullet-item">Savings = custom recurring order module</div>
+              <div class="cs-bullet-item">Dashboard = fully custom Magento module</div>
+              <div class="cs-bullet-item">No wallet in V1 — scoped deliberately</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="line" style="display:block; margin:0;"></span>
+
+    <!-- ══════════ 05 — KEY FLOWS ══════════ -->
+    <section class="cs-section cs-dark">
+      <div class="container">
+        <span class="cs-label">05 — Key Flows</span>
+        <h2 style="font-size:28px; margin-bottom:6px; color:white; line-height:1.2;"><span class="colored-text">Complex flows, simplified aggressively</span></h2>
+        <p style="font-size:13px; color:rgba(255,255,255,.4); margin-bottom:22px;">Each flow mapped before any screen was designed.</p>
+
+        <p class="cs-flow-label">Browse → Buy → Checkout (Guest · Delivery)</p>
+        <div class="cs-flow">
+          <span class="cs-flow-step">Home</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">PLP</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">PDP</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Cart</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Checkout</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step cs-flow-end">Confirmed</span>
+        </div>
+
+        <p class="cs-flow-label">Vault Purchase (Logged In)</p>
+        <div class="cs-flow">
+          <span class="cs-flow-step">PDP</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Cart</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Select: Vault</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Payment</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step cs-flow-end">Gold in Vault</span>
+        </div>
+
+        <p class="cs-flow-label">Savings Plan Setup</p>
+        <div class="cs-flow">
+          <span class="cs-flow-step">Dashboard</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Amount + Frequency</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Vault / Delivery</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Payment Method</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step cs-flow-end">Plan Active</span>
+        </div>
+
+        <p class="cs-flow-label">Login → Portfolio</p>
+        <div class="cs-flow">
+          <span class="cs-flow-step">Login</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Dashboard Home</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Portfolio Value</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step">Holdings</span><span class="cs-flow-arrow">→</span>
+          <span class="cs-flow-step cs-flow-end">Request Delivery</span>
+        </div>
+
+        <div class="cs-full-img">
+          <!-- IMAGE: Flows -->
+          <div class="cs-img-placeholder cs-img-wide">
+            <i class="fa-solid fa-image"></i>
+            User Flow Diagrams — All Key Flows
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 06 — UX DECISIONS ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <span class="cs-label">06 — UX Decisions</span>
+        <h2 style="font-size:28px; margin-bottom:20px; color:white; line-height:1.2;"><span class="colored-text">The thinking behind the design</span></h2>
+        <div class="cs-two-col">
+          <div class="cs-decision-list">
+            <div class="cs-decision-item">
+              <div class="cs-decision-num">01</div>
+              <div>
+                <h6>Vault or delivery — decided early.</h6>
+                <p>The split happens at checkout step 1, not post-payment. Removes confusion, sets expectation upfront.</p>
+              </div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-num">02</div>
+              <div>
+                <h6>Checkout simplified aggressively.</h6>
+                <p>Magento's default multi-page checkout reduced to a 3-step flow. Financial context, not e-commerce conventions.</p>
+              </div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-num">03</div>
+              <div>
+                <h6>Orders and transactions kept separate.</h6>
+                <p>Orders = physical events (bought, delivered). Transactions = financial log. Same data, different mental models.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs-decision-list">
+            <div class="cs-decision-item">
+              <div class="cs-decision-num">04</div>
+              <div>
+                <h6>Dashboard: clarity over completeness.</h6>
+                <p>First login shows "Your Gold" — a simplified view. Advanced modules are one tab deeper, not hidden.</p>
+              </div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-num">05</div>
+              <div>
+                <h6>Savings setup cut from 7 steps to 4.</h6>
+                <p>Amount + frequency combined. Payment method deferred to last step. Less cognitive load at entry.</p>
+              </div>
+            </div>
+            <div class="cs-decision-item">
+              <div class="cs-decision-num">06</div>
+              <div>
+                <h6>Trust built into the product, not bolted on.</h6>
+                <p>Purity info on PDP. Vault certificate refs in dashboard. Third-party logos at checkout. Woven into the flow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="line" style="display:block; margin:0;"></span>
+
+    <!-- ══════════ 07 — UI & SCREENS ══════════ -->
+    <section class="cs-section cs-dark">
+      <div class="container">
+        <span class="cs-label">07 — UI & Screens</span>
+        <h2 style="font-size:28px; margin-bottom:20px; color:white; line-height:1.2;"><span class="colored-text">144+ screens. Every state covered.</span></h2>
+
+        <div class="cs-screen-row">
+          <div class="cs-screen-chip">
+            <i class="fa-solid fa-desktop"></i>
+            <div><strong>69+ Desktop</strong><span>All flows, all states</span></div>
+          </div>
+          <div class="cs-screen-chip">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <div><strong>75+ Mobile</strong><span>Adapted, not scaled</span></div>
+          </div>
+          <div class="cs-screen-chip">
+            <i class="fa-solid fa-sitemap"></i>
+            <div><strong>6 Systems</strong><span>Website to email</span></div>
+          </div>
+          <div class="cs-screen-chip">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div><strong>20+ States</strong><span>Edge cases documented</span></div>
+          </div>
+        </div>
+
+        <div class="cs-full-img">
+          <!-- IMAGE: Core Screens -->
+          <div class="cs-img-placeholder cs-img-xwide">
+            <i class="fa-solid fa-image"></i>
+            Core Screens — Website · Checkout · Dashboard · Savings · Auth
+          </div>
+        </div>
+
+        <div class="cs-two-col" style="margin-top:8px;">
+          <div>
+            <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:10px;">Desktop Coverage</p>
+            <div class="cs-pill-list">
+              <span class="cs-pill">Landing Page</span>
+              <span class="cs-pill">PLP + PDP</span>
+              <span class="cs-pill">Cart + Checkout</span>
+              <span class="cs-pill">Dashboard Home</span>
+              <span class="cs-pill">Holdings</span>
+              <span class="cs-pill">Transactions</span>
+              <span class="cs-pill">Orders</span>
+              <span class="cs-pill">Savings Plans</span>
+              <span class="cs-pill">Vault Management</span>
+              <span class="cs-pill">Auth Screens</span>
+            </div>
+          </div>
+          <div>
+            <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:10px;">Mobile Adaptation</p>
+            <div class="cs-bullet-list">
+              <div class="cs-bullet-item">Bottom sheet for vault/delivery split</div>
+              <div class="cs-bullet-item">Stacked data cards in dashboard</div>
+              <div class="cs-bullet-item">Swipeable tabs, persistent bottom CTAs</div>
+              <div class="cs-bullet-item">44px min touch targets throughout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 08 — DESIGN SYSTEM ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <div class="cs-two-col cs-60-40">
+          <div>
+            <span class="cs-label">08 — Design System</span>
+            <h2 style="font-size:28px; margin-bottom:20px; color:white; line-height:1.2;"><span class="colored-text">Built to hand off, not just hand over</span></h2>
+            <div class="cs-bullet-list">
+              <div class="cs-bullet-item">Figma component library with auto-layout + design tokens</div>
+              <div class="cs-bullet-item">Every component: default, hover, active, disabled, error states</div>
+              <div class="cs-bullet-item">Magento-specific annotation layer for dev team</div>
+              <div class="cs-bullet-item">CSS variable export aligned to Figma tokens</div>
+            </div>
+            <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.28); margin:20px 0 10px;">Components included</p>
+            <div class="cs-pill-list">
+              <span class="cs-pill">Buttons</span>
+              <span class="cs-pill">Inputs</span>
+              <span class="cs-pill">Cards</span>
+              <span class="cs-pill">Tables</span>
+              <span class="cs-pill">Modals</span>
+              <span class="cs-pill">Navigation</span>
+              <span class="cs-pill">Badges</span>
+              <span class="cs-pill">Progress bars</span>
+              <span class="cs-pill">Form fields</span>
+              <span class="cs-pill">Data charts</span>
+            </div>
+          </div>
+          <div>
+            <!-- IMAGE: Design System -->
+            <div class="cs-img-placeholder cs-img-tall">
+              <i class="fa-solid fa-image"></i>
+              Design System — Figma Component Library
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="line" style="display:block; margin:0;"></span>
+
+    <!-- ══════════ 09 — STATES & EDGE CASES ══════════ -->
+    <section class="cs-section cs-dark">
+      <div class="container">
+        <span class="cs-label">09 — States & Edge Cases</span>
+        <h2 style="font-size:28px; margin-bottom:6px; color:white; line-height:1.2;"><span class="colored-text">20+ states. Every failure has a path.</span></h2>
+        <p style="font-size:13px; color:rgba(255,255,255,.38); margin-bottom:22px; line-height:1.6;">
+          Designed at component level, not screen level. Reusable across systems.
+        </p>
+        <div class="cs-state-grid">
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-empty">Empty State</div>
+            <div class="cs-state-card-body"><strong>No Holdings</strong>Illustration + CTA to browse. Not an empty table.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-loading">Loading State</div>
+            <div class="cs-state-card-body"><strong>Portfolio Loading</strong>Skeleton screens matching loaded layout.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-error">Error State</div>
+            <div class="cs-state-card-body"><strong>Payment Failed</strong>Specific reason. Clear retry. No data loss.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-error">Edge Case</div>
+            <div class="cs-state-card-body"><strong>Price Change</strong>Toast at checkout. User must re-confirm total.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-error">Edge Case</div>
+            <div class="cs-state-card-body"><strong>Session Timeout</strong>Cart preserved. Login shown. Flow restored.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-error">Edge Case</div>
+            <div class="cs-state-card-body"><strong>Savings Charge Fails</strong>Plan auto-paused. Email sent. Card update prompted.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-loading">Loading State</div>
+            <div class="cs-state-card-body"><strong>Live Gold Price</strong>Shows "—" with pulse. No stale data, no spinner blocking PDP.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-empty">Empty State</div>
+            <div class="cs-state-card-body"><strong>No Savings Plans</strong>Setup prompt with benefit summary. Not a blank list.</div>
+          </div>
+          <div class="cs-state-card">
+            <div class="cs-state-card-head cs-state-error">Edge Case</div>
+            <div class="cs-state-card-body"><strong>Vault Limit Exceeded</strong>Inline validation before submit. Clear explanation.</div>
+          </div>
+        </div>
+        <div class="cs-full-img">
+          <!-- IMAGE: States -->
+          <div class="cs-img-placeholder cs-img-wide">
+            <i class="fa-solid fa-image"></i>
+            States & Edge Cases Documentation — Figma
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 10 — PROTOTYPING ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <div class="cs-two-col cs-40-60">
+          <div>
+            <!-- IMAGE: Prototype -->
+            <div class="cs-img-placeholder cs-img-tall">
+              <i class="fa-solid fa-image"></i>
+              Prototype Preview — Figma
+            </div>
+          </div>
+          <div>
+            <span class="cs-label">10 — Prototyping</span>
+            <h2 style="font-size:28px; margin-bottom:20px; color:white; line-height:1.2;"><span class="colored-text">5+ interactive prototypes. Validated before build.</span></h2>
+            <div class="cs-bullet-list">
+              <div class="cs-bullet-item"><strong>Buying flow</strong> — guest + logged in paths</div>
+              <div class="cs-bullet-item"><strong>Login flow</strong> — register, forgot password, 2FA</div>
+              <div class="cs-bullet-item"><strong>Savings setup</strong> — full 4-step flow with summary</div>
+              <div class="cs-bullet-item"><strong>Dashboard navigation</strong> — all modules, tabbed states</div>
+              <div class="cs-bullet-item"><strong>Checkout</strong> — vault vs delivery split path</div>
+            </div>
+            <p style="font-size:13px; color:rgba(255,255,255,.38); line-height:1.6; margin-top:18px;">
+              Overlay modals, variant transitions, and conditional nav built in Figma prototype mode. Shared with client before a single line of dev.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="line" style="display:block; margin:0;"></span>
+
+    <!-- ══════════ 11 — DEV HANDOFF ══════════ -->
+    <section class="cs-section cs-dark">
+      <div class="container">
+        <div class="cs-two-col cs-60-40">
+          <div>
+            <span class="cs-label">11 — Developer Handoff</span>
+            <h2 style="font-size:28px; margin-bottom:20px; color:white; line-height:1.2;"><span class="colored-text">Annotated. Constrained. Production-ready.</span></h2>
+            <div class="cs-bullet-list">
+              <div class="cs-bullet-item">Figma Dev Mode — spacing, tokens, states per component</div>
+              <div class="cs-bullet-item">Magento constraints annotated inline — custom vs native</div>
+              <div class="cs-bullet-item">Component variant matrix — all states documented</div>
+              <div class="cs-bullet-item">API field mapping — dynamic content blocks flagged</div>
+              <div class="cs-bullet-item">Clear naming conventions across components and pages</div>
+            </div>
+          </div>
+          <div class="cs-bullet-list" style="margin-top:0;">
+            <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:10px;">Handoff Deliverables</p>
+            <div class="cs-pill-list">
+              <span class="cs-pill cs-p-gold">Figma Dev Mode file</span>
+              <span class="cs-pill cs-p-gold">CSS token export</span>
+              <span class="cs-pill cs-p-gold">Magento module notes</span>
+              <span class="cs-pill cs-p-gold">Edge case doc</span>
+              <span class="cs-pill cs-p-gold">Responsive specs</span>
+              <span class="cs-pill cs-p-gold">API mapping sheet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 12 — OUTCOME ══════════ -->
+    <section class="cs-section">
+      <div class="container">
+        <span class="cs-label">12 — Outcome</span>
+        <h2 style="font-size:28px; margin-bottom:20px; color:white; line-height:1.2;"><span class="colored-text">Full product. Dev-ready. Zero rework.</span></h2>
+        <div class="cs-outcome-row">
+          <div class="cs-outcome-item">
+            <div class="cs-out-num">144+</div>
+            <p>Total screens across desktop + mobile</p>
+          </div>
+          <div class="cs-outcome-item">
+            <div class="cs-out-num">6</div>
+            <p>Full systems designed end-to-end</p>
+          </div>
+          <div class="cs-outcome-item">
+            <div class="cs-out-num">20+</div>
+            <p>Edge cases documented before build</p>
+          </div>
+          <div class="cs-outcome-item">
+            <div class="cs-out-num">0</div>
+            <p>Rework requests post-handoff</p>
+          </div>
+        </div>
+        <div class="cs-bullet-list" style="margin-top:28px; max-width:600px;">
+          <div class="cs-bullet-item">Full MVP — website, checkout, dashboard, savings, auth, email</div>
+          <div class="cs-bullet-item">Prototype reduced alignment meetings by half</div>
+          <div class="cs-bullet-item">Annotated handoff eliminated dev back-and-forth entirely</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 13 — FINAL NOTE ══════════ -->
+    <section class="cs-section cs-dark" style="text-align:center; padding-bottom:100px;">
+      <div class="container">
+        <span class="cs-label" style="display:block; text-align:center; margin-bottom:14px;">Final Note</span>
+        <h2 style="font-size:26px; text-align:center; margin-bottom:0; color:white; line-height:1.3;">
+          <span class="colored-text">"A full-scale product combining ecommerce<br/>infrastructure with fintech experience design."</span>
+        </h2>
+        <p style="font-size:14px; color:rgba(255,255,255,.38); max-width:420px; margin:16px auto 32px; line-height:1.7;">
+          Available for product design, UX strategy, and design system work.
+        </p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="mailto:saksham0541@gmail.com" class="g-i-t"><button>Get In Touch</button></a>
+          <a href="projects.html" class="v-m-p"><button>All Projects</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cursor ball (unchanged) -->
+    <div class="ball-main-div">
+      <div class="ball"></div>
+      <div class="inner-ball"></div>
+    </div>
+
+    <script>
+      document.querySelector('.nav-m-open').addEventListener('click', function(){
+        document.querySelector('.nav-m').classList.add('nav-show');
+      });
+      document.querySelector('.nav-m-close').addEventListener('click', function(){
+        document.querySelector('.nav-m').classList.remove('nav-show');
+      });
+
+      const ball = document.querySelector('.ball');
+      const innerBall = document.querySelector('.inner-ball');
+      const buttons = document.querySelectorAll('button,a,img');
+      let ballX = 0, ballY = 0, mouseX = 0, mouseY = 0;
+
+      document.addEventListener('mousemove', function(e){ mouseX = e.pageX; mouseY = e.pageY; });
+
+      function moveBalls(){
+        ballX += (mouseX - ballX);
+        ballY += (mouseY - ballY);
+        ball.style.left = `${ballX}px`;
+        ball.style.top  = `${ballY}px`;
+        innerBall.style.left = `${ballX}px`;
+        innerBall.style.top  = `${ballY}px`;
+        requestAnimationFrame(moveBalls);
+      }
+      moveBalls();
+
+      buttons.forEach(function(b){
+        b.addEventListener('mouseenter', function(){
+          ball.style.width  = '20px'; ball.style.height = '20px';
+          ball.style.backgroundColor = '#f763017a';
+          innerBall.style.width = '20px'; innerBall.style.height = '20px';
+        });
+        b.addEventListener('mouseleave', function(){
+          ball.style.width  = '40px'; ball.style.height = '40px';
+          ball.style.backgroundColor = '#f76301c9';
+          innerBall.style.width = '20px'; innerBall.style.height = '20px';
+        });
+      });
+    </script>
+  </body>
+</html>

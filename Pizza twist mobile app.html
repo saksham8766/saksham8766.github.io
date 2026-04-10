@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizza Twist – Case Study | Saksham Garg</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/bdfb5b0714.js" crossorigin="anonymous"></script>
+        <script src="js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <style>
+            /* =============================================
+               CASE STUDY PAGE – ENHANCEMENT LAYER ONLY
+               No base styles overridden — only additive
+            ============================================= */
+
+            /* ── Shared case-study utilities ── */
+            .cs-label {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: rgba(255,138,86,0.9);
+                margin-bottom: 14px;
+            }
+
+            .cs-section h2 {
+    color: white;
+}
+
+            .cs-divider {
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(90deg,
+                    rgba(177,108,234,0) 0%,
+                    rgba(255,94,105,0.4) 30%,
+                    rgba(255,138,86,0.4) 70%,
+                    rgba(255,168,75,0) 100%);
+                margin: 60px 0;
+            }
+
+            /* ── Hero ── */
+            .cs-hero {
+                padding: 100px 0 60px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .cs-hero::before {
+                content: '';
+                position: absolute;
+                top: -120px; right: -120px;
+                width: 520px; height: 520px;
+                border-radius: 50%;
+                background: radial-gradient(circle,
+                    rgba(255,94,105,0.12) 0%,
+                    rgba(177,108,234,0.06) 60%,
+                    transparent 100%);
+                pointer-events: none;
+            }
+
+            .cs-hero-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 36px;
+            }
+
+            .cs-hero-badge {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .cs-hero-badge span {
+                font-size: 12px;
+                font-weight: 600;
+                color: rgba(255,255,255,0.5);
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .cs-hero-badge .dot {
+                width: 6px; height: 6px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #ff5e69, #ffa856);
+                flex-shrink: 0;
+            }
+
+            .cs-hero h1 {
+                font-size: 64px;
+                line-height: 1.1;
+                width: 100%;
+                margin-bottom: 0;
+            }
+
+            .cs-hero-sub {
+                font-size: 18px;
+                color: rgba(255,255,255,0.65);
+                line-height: 1.7;
+                max-width: 560px;
+                margin: 0;
+            }
+
+            .cs-stats {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                margin-top: 8px;
+            }
+
+            .cs-stat-pill {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 20px;
+                border-radius: 999px;
+                background: rgba(255,255,255,0.05);
+                border: 1px solid rgba(255,255,255,0.1);
+                font-size: 13px;
+                font-weight: 600;
+                color: rgba(255,255,255,0.8);
+                white-space: nowrap;
+            }
+
+            .cs-stat-pill i {
+                font-size: 13px;
+                background: linear-gradient(68deg, rgba(177,108,234,1) 0%, rgba(255,94,105,1) 50%, rgba(255,168,75,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .cs-hero-cover {
+                width: 100%;
+                height: 480px;
+                border-radius: 16px;
+                background: linear-gradient(135deg, #1a1614 0%, #111 100%);
+                border: 1px solid rgba(255,255,255,0.07);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* ── Placeholder image box ── */
+            .img-placeholder {
+                width: 100%;
+                border-radius: 12px;
+                background: linear-gradient(135deg, #1d1b1a 0%, #111 100%);
+                border: 1px dashed rgba(255,255,255,0.12);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                color: rgba(255,255,255,0.3);
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+
+            .img-placeholder i {
+                font-size: 32px;
+                opacity: 0.4;
+            }
+
+            .img-placeholder.tall   { height: 440px; }
+            .img-placeholder.medium { height: 320px; }
+            .img-placeholder.short  { height: 220px; }
+            .img-placeholder.screen { height: 500px; }
+
+            /* ── Two-column grid ── */
+            .cs-two-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+
+            .cs-three-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+            }
+
+            .cs-four-col {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+
+            /* ── Section wrapper ── */
+            .cs-section {
+                padding: 80px 0;
+            }
+
+            .cs-section.dark-bg {
+                background: #0d0c0b;
+            }
+
+            .cs-section.black-bg {
+                background: #000;
+            }
+
+            /* ── Info card ── */
+            .cs-card {
+                background: rgba(255,255,255,0.03);
+                border: 1px solid rgba(255,255,255,0.07);
+                border-radius: 12px;
+                padding: 28px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cs-card h4 {
+                font-size: 15px;
+                font-weight: 700;
+                color: white;
+                margin: 0;
+                line-height: 100%;
+            }
+
+            .cs-card p {
+                font-size: 13px;
+                color: rgba(255,255,255,0.55);
+                line-height: 1.6;
+                margin: 0;
+                height: auto;
+                overflow: visible;
+            }
+
+            .cs-card .card-icon {
+                font-size: 20px;
+                background: linear-gradient(68deg, rgba(177,108,234,1) 0%, rgba(255,94,105,1) 50%, rgba(255,168,75,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 4px;
+            }
+
+            /* ── Problem list ── */
+            .cs-problem-list {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                margin-top: 10px;
+            }
+
+            .cs-problem-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                padding: 16px 20px;
+                border-radius: 10px;
+                background: rgba(255,94,105,0.06);
+                border: 1px solid rgba(255,94,105,0.12);
+            }
+
+            .cs-problem-item .p-icon {
+                font-size: 16px;
+                color: rgba(255,94,105,0.8);
+                flex-shrink: 0;
+                margin-top: 1px;
+            }
+
+            .cs-problem-item p {
+                font-size: 14px;
+                color: rgba(255,255,255,0.75);
+                line-height: 1.5;
+                margin: 0;
+                height: auto;
+                overflow: visible;
+            }
+
+            /* ── Solution list ── */
+            .cs-solution-list {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                margin-top: 10px;
+            }
+
+            .cs-solution-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                padding: 16px 20px;
+                border-radius: 10px;
+                background: rgba(255,138,86,0.06);
+                border: 1px solid rgba(255,138,86,0.12);
+            }
+
+            .cs-solution-item .s-icon {
+                font-size: 16px;
+                color: rgba(255,138,86,0.9);
+                flex-shrink: 0;
+                margin-top: 1px;
+            }
+
+            .cs-solution-item p {
+                font-size: 14px;
+                color: rgba(255,255,255,0.75);
+                line-height: 1.5;
+                margin: 0;
+                height: auto;
+                overflow: visible;
+            }
+
+            /* ── Role pills ── */
+            .cs-role-pills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 10px;
+            }
+
+            .cs-role-pill {
+                padding: 10px 22px;
+                border-radius: 999px;
+                font-size: 13px;
+                font-weight: 600;
+                color: white;
+                background: rgba(255,255,255,0.06);
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+
+            /* ── Feature block ── */
+            .cs-feature-group {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .cs-feature-block {
+                display: grid;
+                grid-template-columns: 220px 1fr;
+                gap: 30px;
+                align-items: start;
+                padding: 28px;
+                border-radius: 14px;
+                background: rgba(255,255,255,0.025);
+                border: 1px solid rgba(255,255,255,0.06);
+            }
+
+            .cs-feature-title {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .cs-feature-title h4 {
+                font-size: 17px;
+                font-weight: 700;
+                color: white;
+                margin: 0;
+                line-height: 100%;
+            }
+
+            .cs-feature-title .ft-tag {
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: rgba(255,168,75,0.8);
+            }
+
+            .cs-feature-items {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cs-feature-items span {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 14px;
+                color: rgba(255,255,255,0.7);
+                line-height: 1.4;
+            }
+
+            .cs-feature-items span::before {
+                content: '';
+                width: 5px; height: 5px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #ff5e69, #ffa856);
+                flex-shrink: 0;
+            }
+
+            /* ── Flow steps ── */
+            .cs-flow {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .cs-flow-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 16px 24px;
+                border-radius: 10px;
+                background: rgba(255,255,255,0.03);
+                border: 1px solid rgba(255,255,255,0.07);
+                position: relative;
+            }
+
+            .cs-flow-num {
+                width: 32px; height: 32px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, rgba(177,108,234,0.3), rgba(255,94,105,0.3));
+                border: 1px solid rgba(255,94,105,0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+                font-weight: 700;
+                color: white;
+                flex-shrink: 0;
+            }
+
+            .cs-flow-label {
+                font-size: 14px;
+                font-weight: 600;
+                color: rgba(255,255,255,0.85);
+                flex: 1;
+            }
+
+            .cs-flow-arrow {
+                font-size: 12px;
+                color: rgba(255,255,255,0.25);
+            }
+
+            /* ── Screen section ── */
+            .cs-screen-group {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+            }
+
+            .cs-screen-block {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .cs-screen-block h4 {
+                font-size: 16px;
+                font-weight: 700;
+                color: rgba(255,255,255,0.9);
+                margin: 0;
+                letter-spacing: 0.3px;
+            }
+
+            .cs-screen-block p {
+                font-size: 13px;
+                color: rgba(255,255,255,0.45);
+                margin: 0;
+                height: auto;
+                overflow: visible;
+                line-height: 1.5;
+            }
+
+            .cs-screen-grid {
+                display: grid;
+                gap: 16px;
+            }
+
+            .cs-screen-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+            .cs-screen-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+            .cs-screen-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+            /* ── Design system ── */
+            .ds-row {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .ds-block {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .ds-block h4 {
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: rgba(255,255,255,0.4);
+                margin: 0;
+            }
+
+            .ds-colors {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .ds-color-swatch {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .ds-color-chip {
+                width: 60px; height: 60px;
+                border-radius: 10px;
+                border: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .ds-color-swatch span {
+                font-size: 11px;
+                color: rgba(255,255,255,0.4);
+                font-weight: 600;
+            }
+
+            .ds-type-row {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .ds-type-item {
+                display: flex;
+                align-items: baseline;
+                gap: 20px;
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .ds-type-item .type-label {
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: rgba(255,255,255,0.3);
+                width: 80px;
+                flex-shrink: 0;
+            }
+
+            .ds-type-item .type-sample {
+                color: white;
+            }
+
+            .ds-btn-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+                align-items: center;
+            }
+
+            .ds-btn {
+                padding: 10px 24px;
+                border-radius: 999px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: default;
+                font-family: "Jost", sans-serif;
+            }
+
+            .ds-btn.primary {
+                background: linear-gradient(68deg, rgba(177,108,234,1) 0%, rgba(255,94,105,1) 50%, rgba(255,168,75,1) 100%);
+                color: white;
+                border: none;
+            }
+
+            .ds-btn.secondary {
+                background: none;
+                color: white;
+                border: 1px solid rgba(255,255,255,0.25);
+            }
+
+            .ds-btn.ghost {
+                background: rgba(255,255,255,0.06);
+                color: rgba(255,255,255,0.7);
+                border: 1px solid rgba(255,255,255,0.08);
+            }
+
+            /* ── Interaction highlights ── */
+            .cs-interaction-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .cs-interaction-card {
+                padding: 24px;
+                border-radius: 12px;
+                background: rgba(255,255,255,0.025);
+                border: 1px solid rgba(255,255,255,0.07);
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cs-interaction-card .ic-icon {
+                font-size: 22px;
+                background: linear-gradient(68deg, rgba(177,108,234,1) 0%, rgba(255,94,105,1) 50%, rgba(255,168,75,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                width: fit-content;
+            }
+
+            .cs-interaction-card h4 {
+                font-size: 15px;
+                font-weight: 700;
+                color: white;
+                margin: 0;
+                line-height: 100%;
+            }
+
+            .cs-interaction-card p {
+                font-size: 13px;
+                color: rgba(255,255,255,0.5);
+                margin: 0;
+                line-height: 1.5;
+                height: auto;
+                overflow: visible;
+            }
+
+            /* ── Outcome ── */
+            .cs-outcome-row {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .cs-outcome-item {
+                padding: 28px;
+                border-radius: 12px;
+                background: rgba(255,255,255,0.03);
+                border: 1px solid rgba(255,255,255,0.07);
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+            }
+
+            .cs-outcome-item .oc-icon {
+                font-size: 22px;
+                background: linear-gradient(68deg, rgba(177,108,234,1) 0%, rgba(255,94,105,1) 50%, rgba(255,168,75,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .cs-outcome-item h4 {
+                font-size: 16px;
+                font-weight: 700;
+                color: white;
+                margin: 0;
+            }
+
+            .cs-outcome-item p {
+                font-size: 13px;
+                color: rgba(255,255,255,0.5);
+                margin: 0;
+                line-height: 1.5;
+                height: auto;
+                overflow: visible;
+            }
+
+            /* ── Final note ── */
+            .cs-final {
+                padding: 80px 0;
+                text-align: center;
+            }
+
+            .cs-final-box {
+                max-width: 640px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+            }
+
+            .cs-final-box p {
+                font-size: 20px;
+                color: rgba(255,255,255,0.65);
+                line-height: 1.7;
+                font-weight: 400;
+            }
+
+            /* ── Responsive tweaks ── */
+            @media (max-width: 860px) {
+                .cs-hero h1 { font-size: 40px; }
+                .cs-two-col,
+                .cs-three-col,
+                .cs-four-col { grid-template-columns: 1fr; }
+                .cs-feature-block { grid-template-columns: 1fr; }
+                .cs-screen-grid.cols-3,
+                .cs-screen-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+                .cs-outcome-row { grid-template-columns: 1fr; }
+                .cs-interaction-grid { grid-template-columns: 1fr; }
+            }
+
+            @media (max-width: 450px) {
+                .cs-hero h1 { font-size: 30px; }
+                .cs-stats { gap: 10px; }
+                .cs-stat-pill { font-size: 12px; padding: 8px 14px; }
+                .cs-screen-grid.cols-2 { grid-template-columns: 1fr; }
+                .cs-screen-grid.cols-3,
+                .cs-screen-grid.cols-4 { grid-template-columns: 1fr; }
+            }
+        </style>
+    </head>
+<body>
+
+    <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+    <header class="header">
+        <div class="container">
+          <div class="header-cnt">
+            <a href="#" class="logo"><img src="home_img/Saksham Garg.svg" alt="logo"></a>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="coloured">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="my resume.pdf" class="resume-btn-1"><button>My Resume</button></a>
+            <a href="#" class="nav-m-open"><i class="fa-solid fa-bars"></i></a>
+          </div>
+        </div>
+        <div class="nav-m">
+          <div class="container">
+              <a href="#" class="nav-m-close"><i class="fa-solid fa-xmark"></i></a>
+              <ul class="navbar-mobile">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="projects.html" class="coloured">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="my resume.pdf" class="resume-btn-2"><button>My Resume</button></a></li>
+              </ul>
+          </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════ 1. HERO ═══════════════════════ -->
+    <section class="cs-hero">
+        <div class="container">
+            <div class="cs-hero-inner">
+
+                <div class="cs-hero-badge">
+                    <div class="dot"></div>
+                    <span>Case Study · Mobile App · UI/UX Design</span>
+                </div>
+
+                <h1>
+                    <span class="colored-text">Pizza Twist</span><br>
+                    Customer App
+                </h1>
+
+                <p class="cs-hero-sub">
+                    A clean, tap-first mobile ordering experience.<br>
+                    Browse, customise, checkout — done in seconds.
+                </p>
+
+                <div class="cs-stats">
+                    <div class="cs-stat-pill">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        30+ Screens
+                    </div>
+                    <div class="cs-stat-pill">
+                        <i class="fa-solid fa-route"></i>
+                        6 Core Flows
+                    </div>
+                    <div class="cs-stat-pill">
+                        <i class="fa-brands fa-apple"></i>
+                        iOS + Android
+                    </div>
+                    <div class="cs-stat-pill">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        UI/UX Designer
+                    </div>
+                    <div class="cs-stat-pill">
+                        <i class="fa-brands fa-figma"></i>
+                        Figma · Prototype
+                    </div>
+                </div>
+
+                <!-- Hero Cover -->
+                <div class="img-placeholder tall" style="margin-top: 10px;">
+                    <i class="fa-solid fa-image"></i>
+                    Hero Cover — All screens / banner mockup
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 2. PROBLEM ═══════════════════════ -->
+    <section class="cs-section dark-bg">
+        <div class="container">
+
+            <span class="cs-label">The Problem</span>
+            <h2><span class="colored-text">Ordering food</span><br>shouldn't feel like work.</h2>
+
+            <div class="cs-problem-list">
+                <div class="cs-problem-item">
+                    <i class="fa-solid fa-circle-xmark p-icon"></i>
+                    <p>Too many options at once → decision fatigue from the first screen.</p>
+                </div>
+                <div class="cs-problem-item">
+                    <i class="fa-solid fa-circle-xmark p-icon"></i>
+                    <p>Customisation is buried → users can't easily change size, crust, or toppings.</p>
+                </div>
+                <div class="cs-problem-item">
+                    <i class="fa-solid fa-circle-xmark p-icon"></i>
+                    <p>Offers are invisible → deals hidden deep in menus nobody scrolls to.</p>
+                </div>
+                <div class="cs-problem-item">
+                    <i class="fa-solid fa-circle-xmark p-icon"></i>
+                    <p>Checkout feels long → too many steps, unclear pricing, drop-off risk.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 3. SOLUTION ═══════════════════════ -->
+    <section class="cs-section">
+        <div class="container">
+
+            <span class="cs-label">The Solution</span>
+            <h2>Simple flow.<br><span class="colored-text">No confusion.</span></h2>
+
+            <div class="cs-solution-list">
+                <div class="cs-solution-item">
+                    <i class="fa-solid fa-check-circle s-icon"></i>
+                    <p>Step-by-step guided flow — one decision at a time, nothing overwhelming.</p>
+                </div>
+                <div class="cs-solution-item">
+                    <i class="fa-solid fa-check-circle s-icon"></i>
+                    <p>Tap-to-customise — size, crust, and toppings right on the product screen.</p>
+                </div>
+                <div class="cs-solution-item">
+                    <i class="fa-solid fa-check-circle s-icon"></i>
+                    <p>Smart offer nudges — deals shown at the right moment, not buried away.</p>
+                </div>
+                <div class="cs-solution-item">
+                    <i class="fa-solid fa-check-circle s-icon"></i>
+                    <p>Fast, transparent checkout — clear bill breakdown, one tap to confirm.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 4. MY ROLE ═══════════════════════ -->
+    <section class="cs-section dark-bg">
+        <div class="container">
+
+            <span class="cs-label">My Role</span>
+            <h2>What I <span class="colored-text">worked on</span></h2>
+
+            <div class="cs-role-pills">
+                <span class="cs-role-pill"><i class="fa-solid fa-pen-nib" style="margin-right:8px; opacity:0.6;"></i>UI Design</span>
+                <span class="cs-role-pill"><i class="fa-solid fa-route" style="margin-right:8px; opacity:0.6;"></i>UX Flows</span>
+                <span class="cs-role-pill"><i class="fa-solid fa-arrow-pointer" style="margin-right:8px; opacity:0.6;"></i>Interaction Design</span>
+                <span class="cs-role-pill"><i class="fa-brands fa-figma" style="margin-right:8px; opacity:0.6;"></i>Figma Prototype</span>
+                <span class="cs-role-pill"><i class="fa-solid fa-layer-group" style="margin-right:8px; opacity:0.6;"></i>Component System</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 5. KEY FEATURES ═══════════════════════ -->
+    <section class="cs-section">
+        <div class="container">
+
+            <span class="cs-label">Key Features</span>
+            <h2>Built for <span class="colored-text">every step</span></h2>
+
+            <div class="cs-feature-group">
+
+                <div class="cs-feature-block">
+                    <div class="cs-feature-title">
+                        <span class="ft-tag">01</span>
+                        <h4>Menu & Discovery</h4>
+                    </div>
+                    <div class="cs-feature-items">
+                        <span>Category tabs + smart search</span>
+                        <span>Personalised recommendations</span>
+                        <span>Trending & bestseller tags</span>
+                        <span>Veg / non-veg filter toggle</span>
+                    </div>
+                </div>
+
+                <div class="cs-feature-block">
+                    <div class="cs-feature-title">
+                        <span class="ft-tag">02</span>
+                        <h4>Customisation</h4>
+                    </div>
+                    <div class="cs-feature-items">
+                        <span>Size · Crust · Toppings selection</span>
+                        <span>Tap to add / remove — instant</span>
+                        <span>Live price update on every tap</span>
+                        <span>Required vs optional clearly marked</span>
+                    </div>
+                </div>
+
+                <div class="cs-feature-block">
+                    <div class="cs-feature-title">
+                        <span class="ft-tag">03</span>
+                        <h4>Offers & Deals</h4>
+                    </div>
+                    <div class="cs-feature-items">
+                        <span>Coupon code — instant apply</span>
+                        <span>BOGO + Half & Half flows</span>
+                        <span>Unlock nudge at cart step</span>
+                        <span>"You saved ₹X" confirmation</span>
+                    </div>
+                </div>
+
+                <div class="cs-feature-block">
+                    <div class="cs-feature-title">
+                        <span class="ft-tag">04</span>
+                        <h4>Cart & Checkout</h4>
+                    </div>
+                    <div class="cs-feature-items">
+                        <span>Full item summary + quantity edit</span>
+                        <span>Clear tax + delivery breakdown</span>
+                        <span>Address selection with map</span>
+                        <span>One-tap quick checkout</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 6. USER FLOWS ═══════════════════════ -->
+    <section class="cs-section dark-bg">
+        <div class="container">
+
+            <span class="cs-label">User Flows</span>
+            <h2><span class="colored-text">Simple paths.</span><br>Clear decisions.</h2>
+
+            <div class="cs-two-col" style="gap: 30px; margin-top: 10px;">
+
+                <div>
+                    <p style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Core Ordering</p>
+                    <div class="cs-flow">
+                        <div class="cs-flow-item">
+                            <div class="cs-flow-num">1</div>
+                            <span class="cs-flow-label">Browse Menu</span>
+                            <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                        </div>
+                        <div class="cs-flow-item">
+                            <div class="cs-flow-num">2</div>
+                            <span class="cs-flow-label">Customise Item</span>
+                            <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                        </div>
+                        <div class="cs-flow-item">
+                            <div class="cs-flow-num">3</div>
+                            <span class="cs-flow-label">Review Cart</span>
+                            <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                        </div>
+                        <div class="cs-flow-item">
+                            <div class="cs-flow-num">4</div>
+                            <span class="cs-flow-label">Checkout & Confirm</span>
+                            <i class="fa-solid fa-check cs-flow-arrow" style="color: rgba(255,138,86,0.6);"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 30px;">
+                    <div>
+                        <p style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Auth Flow</p>
+                        <div class="cs-flow">
+                            <div class="cs-flow-item">
+                                <div class="cs-flow-num">1</div>
+                                <span class="cs-flow-label">Enter Phone</span>
+                                <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                            </div>
+                            <div class="cs-flow-item">
+                                <div class="cs-flow-num">2</div>
+                                <span class="cs-flow-label">OTP Verify</span>
+                                <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                            </div>
+                            <div class="cs-flow-item">
+                                <div class="cs-flow-num">3</div>
+                                <span class="cs-flow-label">Home Screen</span>
+                                <i class="fa-solid fa-check cs-flow-arrow" style="color: rgba(255,138,86,0.6);"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;">Offer Flow</p>
+                        <div class="cs-flow">
+                            <div class="cs-flow-item">
+                                <div class="cs-flow-num">1</div>
+                                <span class="cs-flow-label">See BOGO Banner</span>
+                                <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                            </div>
+                            <div class="cs-flow-item">
+                                <div class="cs-flow-num">2</div>
+                                <span class="cs-flow-label">Select Free Item</span>
+                                <i class="fa-solid fa-arrow-right cs-flow-arrow"></i>
+                            </div>
+                            <div class="cs-flow-item">
+                                <div class="cs-flow-num">3</div>
+                                <span class="cs-flow-label">Applied + Checkout</span>
+                                <i class="fa-solid fa-check cs-flow-arrow" style="color: rgba(255,138,86,0.6);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 7. UI SCREENS ═══════════════════════ -->
+    <section class="cs-section">
+        <div class="container">
+
+            <span class="cs-label">UI Screens</span>
+            <h2>Every screen, <span class="colored-text">designed with intent.</span></h2>
+
+            <div class="cs-screen-group">
+
+                <!-- Onboarding -->
+                <div class="cs-screen-block">
+                    <div>
+                        <h4>Onboarding</h4>
+                        <p>First impression. Clear brand, quick setup.</p>
+                    </div>
+                    <div class="cs-screen-grid cols-3">
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Splash Screen
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Onboarding Slide 1
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Onboarding Slide 2
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-divider" style="margin: 0;"></div>
+
+                <!-- Login / OTP -->
+                <div class="cs-screen-block">
+                    <div>
+                        <h4>Login / OTP</h4>
+                        <p>Phone → OTP → done. No passwords needed.</p>
+                    </div>
+                    <div class="cs-screen-grid cols-2">
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Phone Entry Screen
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            OTP Verification Screen
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-divider" style="margin: 0;"></div>
+
+                <!-- Home / Menu -->
+                <div class="cs-screen-block">
+                    <div>
+                        <h4>Home / Menu</h4>
+                        <p>Categories, search, offers, and recommendations — above the fold.</p>
+                    </div>
+                    <div class="cs-screen-grid cols-3">
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Home Screen
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Category View
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Search Screen
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-divider" style="margin: 0;"></div>
+
+                <!-- Product Detail + Customisation -->
+                <div class="cs-screen-block">
+                    <div>
+                        <h4>Product Detail & Customisation</h4>
+                        <p>Tap to pick size, crust, toppings. Price updates live.</p>
+                    </div>
+                    <div class="cs-screen-grid cols-4">
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Product Detail
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Size Selection
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Toppings Step
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Crust Selection
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-divider" style="margin: 0;"></div>
+
+                <!-- Cart & Checkout -->
+                <div class="cs-screen-block">
+                    <div>
+                        <h4>Cart & Checkout</h4>
+                        <p>Everything clear. No surprises at payment.</p>
+                    </div>
+                    <div class="cs-screen-grid cols-3">
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Cart Screen
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Checkout Screen
+                        </div>
+                        <div class="img-placeholder screen">
+                            <i class="fa-solid fa-image"></i>
+                            Order Success
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 8. CUSTOMISATION HIGHLIGHT ═══════════════════════ -->
+    <section class="cs-section dark-bg">
+        <div class="container">
+
+            <span class="cs-label">Customisation Deep Dive</span>
+            <h2>Your pizza, <span class="colored-text">exactly how you want it.</span></h2>
+
+            <div class="cs-two-col" style="align-items: center; gap: 50px;">
+
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                    <div class="cs-card">
+                        <i class="fa-solid fa-list-ol card-icon"></i>
+                        <h4>Step-Based Selection</h4>
+                        <p>Users move through size → crust → toppings in sequence. No guessing what's next.</p>
+                    </div>
+                    <div class="cs-card">
+                        <i class="fa-solid fa-circle-check card-icon"></i>
+                        <h4>Required vs Optional</h4>
+                        <p>Mandatory choices clearly marked. Optional extras stay out of the way until needed.</p>
+                    </div>
+                    <div class="cs-card">
+                        <i class="fa-solid fa-indian-rupee-sign card-icon"></i>
+                        <h4>Live Price Update</h4>
+                        <p>Every tap reflects instantly in the price. No checkout surprises.</p>
+                    </div>
+                    <div class="cs-card">
+                        <i class="fa-solid fa-rotate-left card-icon"></i>
+                        <h4>Easy Reset</h4>
+                        <p>Tap to remove any selection. No friction in going back.</p>
+                    </div>
+                </div>
+
+                <div class="img-placeholder" style="height: 560px;">
+                    <i class="fa-solid fa-image"></i>
+                    Customisation Flow — Step screens
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 9. OFFERS & PRICING ═══════════════════════ -->
+    <section class="cs-section">
+        <div class="container">
+
+            <span class="cs-label">Offers & Pricing</span>
+            <h2>Deals that <span class="colored-text">actually show up.</span></h2>
+
+            <div class="cs-two-col" style="align-items: center; gap: 50px;">
+
+                <div class="img-placeholder" style="height: 480px;">
+                    <i class="fa-solid fa-image"></i>
+                    Offers / Coupon screens
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                    <div class="cs-card">
+                        <i class="fa-solid fa-tag card-icon"></i>
+                        <h4>Coupon Applies Instantly</h4>
+                        <p>Enter code → discount shown immediately. No extra steps.</p>
+                    </div>
+                    <div class="cs-card">
+                        <i class="fa-solid fa-piggy-bank card-icon"></i>
+                        <h4>"You Saved ₹X" Clarity</h4>
+                        <p>Savings confirmed right on cart screen. Builds trust, reduces second-guessing.</p>
+                    </div>
+                    <div class="cs-card">
+                        <i class="fa-solid fa-bell card-icon"></i>
+                        <h4>Unlock Offer Nudges</h4>
+                        <p>"Add ₹50 more to unlock free delivery" — smart push at the right moment.</p>
+                    </div>
+                    <div class="cs-card">
+                        <i class="fa-solid fa-receipt card-icon"></i>
+                        <h4>Transparent Bill</h4>
+                        <p>Item total · taxes · delivery · discount. All broken down, nothing hidden.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 10. DESIGN SYSTEM ═══════════════════════ -->
+    <section class="cs-section dark-bg">
+        <div class="container">
+
+            <span class="cs-label">Design System</span>
+            <h2>Consistent.<br><span class="colored-text">Scalable. Fast.</span></h2>
+
+            <div class="ds-row">
+
+                <!-- Colors -->
+                <div class="ds-block">
+                    <h4>Colors</h4>
+                    <div class="ds-colors">
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: linear-gradient(135deg, #b16cea, #ff5e69);"></div>
+                            <span>Brand</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: #ff8a56;"></div>
+                            <span>Accent</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: #ffa84b;"></div>
+                            <span>Warm</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: #161513;"></div>
+                            <span>Background</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: #000000; border: 1px solid rgba(255,255,255,0.15);"></div>
+                            <span>Surface</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);"></div>
+                            <span>Card</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: #ffffff;"></div>
+                            <span>White</span>
+                        </div>
+                        <div class="ds-color-swatch">
+                            <div class="ds-color-chip" style="background: rgba(255,255,255,0.5);"></div>
+                            <span>Muted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="ds-block">
+                    <h4>Typography</h4>
+                    <div class="ds-type-row">
+                        <div class="ds-type-item">
+                            <span class="type-label">Display</span>
+                            <span class="type-sample" style="font-family: 'Bai Jamjuree'; font-size: 32px; font-weight: 700;">Pizza Twist</span>
+                        </div>
+                        <div class="ds-type-item">
+                            <span class="type-label">Heading</span>
+                            <span class="type-sample" style="font-size: 22px; font-weight: 700;">Order Summary</span>
+                        </div>
+                        <div class="ds-type-item">
+                            <span class="type-label">Body</span>
+                            <span class="type-sample" style="font-size: 16px; color: rgba(255,255,255,0.7);">Margherita · Regular · Classic Crust</span>
+                        </div>
+                        <div class="ds-type-item">
+                            <span class="type-label">Caption</span>
+                            <span class="type-sample" style="font-size: 12px; color: rgba(255,255,255,0.4);">Serves 2 · 280 kcal</span>
+                        </div>
+                        <div class="ds-type-item">
+                            <span class="type-label">Label</span>
+                            <span class="type-sample" style="font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,168,75,0.9);">Bestseller</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="ds-block">
+                    <h4>Buttons</h4>
+                    <div class="ds-btn-row">
+                        <button class="ds-btn primary">Add to Cart</button>
+                        <button class="ds-btn secondary">Customise</button>
+                        <button class="ds-btn ghost">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Components placeholder -->
+                <div class="ds-block">
+                    <h4>Components</h4>
+                    <div class="cs-screen-grid cols-3" style="gap: 16px;">
+                        <div class="img-placeholder short">
+                            <i class="fa-solid fa-image"></i>
+                            Cards
+                        </div>
+                        <div class="img-placeholder short">
+                            <i class="fa-solid fa-image"></i>
+                            Inputs & Fields
+                        </div>
+                        <div class="img-placeholder short">
+                            <i class="fa-solid fa-image"></i>
+                            Bottom Bar / Tab
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 11. INTERACTION HIGHLIGHTS ═══════════════════════ -->
+    <section class="cs-section">
+        <div class="container">
+
+            <span class="cs-label">Interaction Design</span>
+            <h2>Details that <span class="colored-text">feel right.</span></h2>
+
+            <div class="cs-interaction-grid">
+                <div class="cs-interaction-card">
+                    <div class="ic-icon"><i class="fa-solid fa-hand-pointer"></i></div>
+                    <h4>Tap Feedback</h4>
+                    <p>Every button responds visually on press. Users always know it worked.</p>
+                </div>
+                <div class="cs-interaction-card">
+                    <div class="ic-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                    <h4>Add-to-Cart Animation</h4>
+                    <p>Item flies to cart icon. Satisfying micro-moment on every order add.</p>
+                </div>
+                <div class="cs-interaction-card">
+                    <div class="ic-icon"><i class="fa-solid fa-thumbtack"></i></div>
+                    <h4>Sticky CTA</h4>
+                    <p>Checkout button stays visible while scrolling. One tap away at all times.</p>
+                </div>
+                <div class="cs-interaction-card">
+                    <div class="ic-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+                    <h4>Bottom Sheets</h4>
+                    <p>Filters, address selection, and extras slide up naturally — no full-page loads.</p>
+                </div>
+            </div>
+
+            <div class="img-placeholder medium" style="margin-top: 28px;">
+                <i class="fa-solid fa-image"></i>
+                Interaction highlights / prototype preview
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 12. OUTCOME ═══════════════════════ -->
+    <section class="cs-section dark-bg">
+        <div class="container">
+
+            <span class="cs-label">Outcome</span>
+            <h2>Designed to <span class="colored-text">perform.</span></h2>
+
+            <div class="cs-outcome-row">
+                <div class="cs-outcome-item">
+                    <div class="oc-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h4>Faster Ordering</h4>
+                    <p>Guided flow cuts decision time. Users move from browse to checkout smoothly.</p>
+                </div>
+                <div class="cs-outcome-item">
+                    <div class="oc-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h4>Clearer Decisions</h4>
+                    <p>One step at a time. No overwhelm, no confusion, no second-guessing.</p>
+                </div>
+                <div class="cs-outcome-item">
+                    <div class="oc-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h4>Smooth Checkout</h4>
+                    <p>Transparent pricing and quick address flow reduces drop-off at the last step.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ 13. FINAL NOTE ═══════════════════════ -->
+    <section class="cs-final">
+        <div class="container">
+            <div class="cs-final-box">
+                <span class="cs-label">Final Note</span>
+                <p>
+                    A focused UI project — built around making complex food ordering feel effortless.
+                    No heavy theory, just clean flows and screens that work.
+                </p>
+                <a href="mailto:saksham0541@gmail.com" class="g-i-t">
+                    <button>Let's Work Together</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════ CURSOR BALL ═══════════════════════ -->
+    <div class="ball-main-div">
+        <div class="ball"></div>
+        <div class="inner-ball"></div>
+    </div>
+
+    <script>
+        // Mobile nav
+        document.querySelector('.nav-m-open').addEventListener('click', function(){
+            document.querySelector('.nav-m').classList.add('nav-show');
+        });
+        document.querySelector('.nav-m-close').addEventListener('click', function(){
+            document.querySelector('.nav-m').classList.remove('nav-show');
+        });
+
+        // Cursor ball
+        const ball = document.querySelector('.ball');
+        const innerBall = document.querySelector('.inner-ball');
+        const buttons = document.querySelectorAll('button, a, img');
+        let ballX = 0, ballY = 0, mouseX = 0, mouseY = 0;
+
+        document.addEventListener('mousemove', function(e){
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        function moveBalls(){
+            ballX += (mouseX - ballX) * 1;
+            ballY += (mouseY - ballY) * 1;
+            ball.style.left = `${ballX}px`;
+            ball.style.top  = `${ballY}px`;
+            innerBall.style.left = `${ballX}px`;
+            innerBall.style.top  = `${ballY}px`;
+            requestAnimationFrame(moveBalls);
+        }
+        moveBalls();
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                ball.style.width = '20px';
+                ball.style.height = '20px';
+                ball.style.backgroundColor = '#f763017a';
+                innerBall.style.width = '20px';
+                innerBall.style.height = '20px';
+            });
+            button.addEventListener('mouseleave', () => {
+                ball.style.width = '40px';
+                ball.style.height = '40px';
+                ball.style.backgroundColor = '#f76301c9';
+                innerBall.style.width = '20px';
+                innerBall.style.height = '20px';
+            });
+        });
+    </script>
+</body>
+</html>
